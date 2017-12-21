@@ -4,16 +4,22 @@ using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
+using SQLite;
+using ICT13580042FinalA.Helpers;
 
 namespace ICT13580042FinalA
 {
     public partial class App : Application
     {
-        public App()
+        public static DbHelper DbHelper { get; set; }
+
+        public App(string dbPath)
         {
             InitializeComponent();
 
-            MainPage = new ICT13580042FinalA.MainPage();
+            DbHelper = new DbHelper(dbPath);
+
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

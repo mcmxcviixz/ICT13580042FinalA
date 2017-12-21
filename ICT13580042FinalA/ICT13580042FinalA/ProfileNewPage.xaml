@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ICT13580042FinalA.ProfileNewPage">
+    <Grid>
+
+        <ScrollView>
+
+            <Frame
+                Margin="30"
+                CornerRadius="20"
+                BackgroundColor="#0fb4ae"
+                VerticalOptions="Start">
+
+                <StackLayout
+                    Orientation="Vertical">
+
+                    <Label
+                        x:Name="titleLable"
+                        Text="เพิ่มรายชื่อใหม่"
+                        TextColor="#ffffff"
+                        HorizontalTextAlignment="Center"
+                        FontSize="20"
+                        FontAttributes="Bold"/>
+
+                    <Label
+                        Text="ชื่อ"
+                        TextColor="#67e2e8"
+                        FontAttributes="Bold"
+                        FontSize="14"/>
+                    <Entry
+                        x:Name="nameEntry"
+                        Placeholder="ชื่อ"
+                        PlaceholderColor="#9ee3e3"
+                        TextColor="#e1f5f3"
+                        BackgroundColor="#57cbca"
+                        Keyboard="Text"/>
+
+                    <Label
+                        Text="นามสกุล"
+                        TextColor="#67e2e8"
+                        FontAttributes="Bold"
+                        FontSize="14"/>
+                    <Entry
+                        x:Name="surnameEntry"
+                        Placeholder="นามสกุล"
+                        PlaceholderColor="#9ee3e3"
+                        TextColor="#e1f5f3"
+                        BackgroundColor="#57cbca"
+                        Keyboard="Text"/>
+
+                    <Label
+                        Text="อายุ"
+                        TextColor="#67e2e8"
+                        FontAttributes="Bold"
+                        FontSize="14"/>
+                    <Entry
+                        x:Name="oldEntry"
+                        Placeholder="อายุ"
+                        PlaceholderColor="#9ee3e3"
+                        TextColor="#e1f5f3"
+                        BackgroundColor="#57cbca"
+                        Keyboard="Numeric"/>
+
+                    <Label
+                        Text="เพศ"
+                        TextColor="#67e2e8"
+                        FontAttributes="Bold"
+                        FontSize="14"/>
+                    <Picker
+                        x:Name="sexPicker"
+                        Title="เลือกเพศ"
+                        TextColor="#17706f"
+                        BackgroundColor="#ccd3d3"/>
+
+                    <Label
+                        Text="แผนก"
+                        TextColor="#67e2e8"
+                        FontAttributes="Bold"
+                        FontSize="14"/>
+                    <Editor 
+                        x:Name="typeEditor"
+                        HeightRequest="100"
+                        TextColor="#e1f5f3"
+                        BackgroundColor="#57cbca"
+                        Keyboard="Text"/>
+
+                    <Label
+                        Text="เบอร์โทร"
+                        TextColor="#67e2e8"
+                        FontAttributes="Bold"
+                        FontSize="14"/>
+                    <Entry
+                        x:Name="telEntry"
+                        Placeholder="เบอร์โทร"
+                        PlaceholderColor="#9ee3e3"
+                        TextColor="#e1f5f3"
+                        BackgroundColor="#57cbca"
+                        Keyboard="Numeric"/>
+
+                    <Label
+                        Text="อีเมล์"
+                        TextColor="#67e2e8"
+                        FontAttributes="Bold"
+                        FontSize="14"/>
+                    <Editor 
+                        x:Name="emailEditor"
+                        HeightRequest="100"
+                        TextColor="#e1f5f3"
+                        BackgroundColor="#57cbca"
+                        Keyboard="Text"/>
+
+                    <Label
+                        Text="ที่อยู่"
+                        TextColor="#67e2e8"
+                        FontAttributes="Bold"
+                        FontSize="14"/>
+                    <Editor 
+                        x:Name="addressEditor"
+                        HeightRequest="100"
+                        TextColor="#e1f5f3"
+                        BackgroundColor="#57cbca"
+                        Keyboard="Text"/>
+
+                    <Label
+                        Text="สถานะแต่งงาน"
+                        TextColor="#67e2e8"
+                        FontAttributes="Bold"
+                        FontSize="14"/>
+                    <Picker
+                        x:Name="statusPicker"
+                        Title="เลือกสถานะแต่งงาน"
+                        TextColor="#17706f"
+                        BackgroundColor="#ccd3d3"/>
+
+                    <Label
+                        Text="จำนวนบุตร"
+                        TextColor="#67e2e8"
+                        FontAttributes="Bold"
+                        FontSize="14"/>
+                    <Entry
+                        x:Name="boyEntry"
+                        Placeholder="จำนวนบุตร"
+                        PlaceholderColor="#9ee3e3"
+                        TextColor="#e1f5f3"
+                        BackgroundColor="#57cbca"
+                        Keyboard="Numeric"/>
+
+                    <Label
+                        Text="เงินเดือน"
+                        TextColor="#67e2e8"
+                        FontAttributes="Bold"
+                        FontSize="14"/>
+                    <Entry
+                        x:Name="salaryEntry"
+                        Placeholder="เงินเดือน"
+                        PlaceholderColor="#9ee3e3"
+                        TextColor="#e1f5f3"
+                        BackgroundColor="#57cbca"
+                        Keyboard="Numeric"/>
+
+                    <Grid
+                        Margin="0,10,0,0">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button
+                            x:Name="cancelButton"
+                            Text="Cancel"
+                            TextColor="#ffffff"
+                            BackgroundColor="#cd7271"/>
+
+                        <Button
+                            x:Name="saveButton"
+                            Text="Save"
+                            TextColor="#ffffff"
+                            BackgroundColor="#3ad8aa"
+                            Grid.Column="1"/>
+
+                    </Grid>
+
+                </StackLayout>
+
+            </Frame>
+
+        </ScrollView>
+
+    </Grid>
+
+</ContentPage>

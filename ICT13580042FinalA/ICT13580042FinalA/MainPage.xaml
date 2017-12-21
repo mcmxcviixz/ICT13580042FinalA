@@ -2,12 +2,118 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ICT13580042FinalA"
-             x:Class="ICT13580042FinalA.MainPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="ICT13580042FinalA.MainPage"
+             Title="Ploy Shop">
+
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem
+            Text="New"
+            x:Name="newButton"/>
+
+    </ContentPage.ToolbarItems>
+
+    <ListView
+        x:Name="profileListView"
+        RowHeight="100">
+
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.ContextActions>
+
+                        <MenuItem
+                            Text="Edit"
+                            CommandParameter="{Binding .}"
+                            Clicked="Edit_Clicked"/>
+
+                        <MenuItem
+                            Text="Delete"
+                            CommandParameter="{Binding .}"
+                            IsDestructive="true"
+                            Clicked="Delete_Clicked"/>
+
+                    </ViewCell.ContextActions>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="50"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image
+                            BackgroundColor="Silver"
+                            HeightRequest="100"
+                            Source="http://www.graceastoria.org/wp-content/uploads/photo-gallery/not-pictured.jpg"/>
+
+                        <StackLayout
+                            Grid.Column="1"
+                            Orientation="Vertical">
+
+                            <Label
+                                Text="{Binding Name}"
+                                FontAttributes="Bold"
+                                TextColor="Navy"/>
+
+                            <Label
+                                Text="{Binding Surname}"
+                                FontAttributes="Bold"
+                                TextColor="Navy"/>
+
+                            <Label
+                                Text="{Binding Old, StringFormat='อายุ: {0}'}"/>
+
+                            <Label
+                                Text="{Binding Sex}"
+                                TextColor="Navy"/>
+
+                            <Label
+                                Text="{Binding Type}"
+                                TextColor="Navy"/>
+
+                            <Label
+                                Text="{Binding Tel, StringFormat='โทร: {0}'}"/>
+
+                            <Label
+                                Text="{Binding Email}"
+                                TextColor="Navy"/>
+
+                            <Label
+                                Text="{Binding Address}"
+                                TextColor="Navy"/>
+
+                            <Label
+                                Text="{Binding Status}"
+                                TextColor="Navy"/>
+
+                            <Label
+                                Text="{Binding Boy, StringFormat='เงินเดือน: {0}'}"/>
+
+                            <Label
+                                Text="{Binding Salary, StringFormat='เงินเดือน: {0}'}"/>
+
+
+
+                        </StackLayout>
+
+                        <Button
+                            Text="+"
+                            FontSize="30"
+                            Grid.Column="2"
+                            Margin="5"
+                            BackgroundColor="Silver"
+                            VerticalOptions="End"
+                            HeightRequest="50"/>
+
+                    </Grid>
+
+                </ViewCell>
+
+            </DataTemplate>
+
+        </ListView.ItemTemplate>
+
+    </ListView>
+
 </ContentPage>
